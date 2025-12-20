@@ -1,7 +1,8 @@
 ## Hi👋,I'm Sujan Billava
 
 # 💫 About Me:
-I am a student
+I am a studen
+My resume:
 
 
 ## 🌐 Socials:

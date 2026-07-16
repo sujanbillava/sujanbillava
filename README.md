@@ -23,6 +23,5 @@ I am a student
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sujanbillava&layout=compact&theme=tokyonight" />
 </p>
 ---
-[![](https://visitcount.itsvg.in/api?id=sujanbillava&icon=0&color=6)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->

@@ -11,17 +11,13 @@ I am a student
 # 📊 GitHub Stats:
 
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sujanbillava&layout=compact&theme=tokyonight&cache_seconds=1800" />
-</p>
+
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=sujanbillava&theme=tokyonight" alt="GitHub Streak" />
 </p>
 
-<p align="center">
- <img src="https://github-readme-stats.vercel.app/api?username=sujanbillava&show_icons=true&theme=tokyonight&cache_seconds=1800" />
-</p>
+
 ---
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->

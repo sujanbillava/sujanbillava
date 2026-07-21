@@ -16,11 +16,10 @@ I am a student
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=sujanbillava&show_icons=true&theme=tokyonight" />
+  <img src="https://github-readme-stats.vercel.app/api?username=sujanbillava&show_icons=true&theme=github_dark&cache_seconds=1800" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=sujanbillava&layout=compact&theme=tokyonight" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sujanbillava&layout=compact&theme=github_dark&cache_seconds=1800" />
 </p>
-
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->

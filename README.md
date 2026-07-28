@@ -1,9 +1,9 @@
 ## Hi👋,I'm Sujan Billava
 
 # 💫 About Me:
-🎓 Computer Science and Engineering student
-💻 Passionate about programming and software development
-🌱 Currently learning Full-Stack Development
+🎓 Computer Science and Engineering student|
+💻 Passionate about programming and software development|
+🌱 Currently learning Full-Stack Development|
 
 
 ## 🌐 Socials:

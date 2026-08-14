@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Calculator</title>
+<title>Premium</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
 body{min-height:100vh;background:#070b14;color:#fff;display:flex;justify-content:center;padding:25px 10px}
@@ -120,7 +120,7 @@ body{padding:10px}.navbar{margin-bottom:20px}.nav-item{font-size:14px;gap:5px}.n
 </div>
 
 <div id="premiumPage" class="premium-info">
-<h2>Premium Calculator</h2>
+<h2>Premium</h2>
 <p>Unlock calculator results with Premium Access. Premium access costs ₹49.</p>
 <br><p>Click the <b>=</b> button to access the Premium payment screen.</p>
 </div>
@@ -230,7 +230,7 @@ function openPremium(){document.getElementById("premiumModal").classList.add("sh
 function closePremium(){document.getElementById("premiumModal").classList.remove("show")}
 
 function payUsingUPI(){
-const link="upi://pay?pa="+encodeURIComponent(UPI_ID)+"&pn="+encodeURIComponent("Premium Calculator")+"&am="+PREMIUM_PRICE+"&cu=INR";
+const link="upi://pay?pa="+encodeURIComponent(UPI_ID)+"&pn="+encodeURIComponent("Premium")+"&am="+PREMIUM_PRICE+"&cu=INR";
 window.location.href=link;
 }
 
@@ -245,7 +245,7 @@ setTimeout(()=>el.innerText=old,1500)
 function generateQR(){
 const box=document.getElementById("qrcode");
 box.innerHTML="";
-const link="upi://pay?pa="+encodeURIComponent(UPI_ID)+"&pn="+encodeURIComponent("Premium Calculator")+"&am="+PREMIUM_PRICE+"&cu=INR";
+const link="upi://pay?pa="+encodeURIComponent(UPI_ID)+"&pn="+encodeURIComponent("Premium")+"&am="+PREMIUM_PRICE+"&cu=INR";
 new QRCode(box,{text:link,width:150,height:150,correctLevel:QRCode.CorrectLevel.H})
 }
 

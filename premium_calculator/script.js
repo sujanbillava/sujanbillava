@@ -1,5 +1,5 @@
 const UPI_ID="6361914076@upi";
-const PREMIUM_PRICE="25";
+const PREMIUM_PRICE="10";
 let currentInput="",expression="",history=[],memoryValue=0;
 
 const display=document.getElementById("display");

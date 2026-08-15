@@ -57,3 +57,11 @@ body{padding:10px}.navbar{margin-bottom:20px}.nav-item{font-size:14px;gap:5px}.n
 .payment-content{padding:20px}.payment-required{padding:18px}.required-text{font-size:15px}.price{font-size:28px}.payment-grid{grid-template-columns:1fr}
 .modal-footer{padding:18px 20px}.paid-btn{padding:0 18px;font-size:14px}
 }
+
+.qr-help{
+  color:#9ba9bd;
+  font-size:13px;
+  text-align:center;
+  margin-top:10px;
+  line-height:1.4;
+}

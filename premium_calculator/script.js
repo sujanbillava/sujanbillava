@@ -1,5 +1,5 @@
 const UPI_ID="6361914076@upi";
-const PREMIUM_PRICE="49";
+const PREMIUM_PRICE="25";
 let currentInput="",expression="",history=[],memoryValue=0;
 
 const display=document.getElementById("display");
@@ -61,9 +61,21 @@ if(page==="premium")document.querySelectorAll(".nav-item")[2].classList.add("act
 function openPremium(){document.getElementById("premiumModal").classList.add("show")}
 function closePremium(){document.getElementById("premiumModal").classList.remove("show")}
 
+function getUPILink(){
+  return "upi://pay"
+    + "?pa=" + encodeURIComponent(UPI_ID)
+    + "&pn=" + encodeURIComponent("ApexSujan")
+    + "&am=" + encodeURIComponent(PREMIUM_PRICE)
+    + "&cu=INR"
+    + "&tn=" + encodeURIComponent("ApexSujan Premium Access");
+}
+
 function payUsingUPI(){
-const link="upi://pay?pa="+encodeURIComponent(UPI_ID)+"&pn="+encodeURIComponent("Premium")+"&am="+PREMIUM_PRICE+"&cu=INR";
-window.location.href=link;
+  const link = getUPILink();
+
+  // UPI deep links work on compatible mobile devices with a UPI app.
+  // On desktop, the QR code below should be scanned with a phone.
+  window.location.href = link;
 }
 
 function copyUPI(){
@@ -75,10 +87,16 @@ setTimeout(()=>el.innerText=old,1500)
 }
 
 function generateQR(){
-const box=document.getElementById("qrcode");
-box.innerHTML="";
-const link="upi://pay?pa="+encodeURIComponent(UPI_ID)+"&pn="+encodeURIComponent("Premium")+"&am="+PREMIUM_PRICE+"&cu=INR";
-new QRCode(box,{text:link,width:150,height:150,correctLevel:QRCode.CorrectLevel.H})
+  const box=document.getElementById("qrcode");
+  box.innerHTML="";
+  const link=getUPILink();
+
+  new QRCode(box,{
+    text:link,
+    width:150,
+    height:150,
+    correctLevel:QRCode.CorrectLevel.H
+  });
 }
 
 function confirmPayment(){

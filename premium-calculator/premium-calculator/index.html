@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<div class="navbar">
+<div class="nav-item active" onclick="showPage('calculator')"><span class="nav-icon">▣</span><span>Calculator</span></div>
+<div class="nav-item" onclick="showPage('history')"><span class="nav-icon">◷</span><span>History (<span id="historyCount">0</span>)</span></div>
+<div class="nav-item" onclick="showPage('premium')"><span class="nav-icon">♢</span><span>Premium Info</span></div>
+</div>
+
+<div id="calculatorPage" class="calculator">
+<div class="display">
+<div class="expression" id="expression"></div>
+<div class="result" id="display">0</div>
+<div class="display-line"></div>
+<div class="memory">Memory: <span id="memory">0</span></div>
+</div>
+
+<div class="scientific">
+<button class="sci-btn" onclick="scientific('sin')">sin</button>
+<button class="sci-btn" onclick="scientific('cos')">cos</button>
+<button class="sci-btn" onclick="scientific('tan')">tan</button>
+<button class="sci-btn" onclick="scientific('sqrt')">√</button>
+<button class="sci-btn" onclick="scientific('square')">x²</button>
+<button class="sci-btn" onclick="scientific('log')">log</button>
+</div>
+
+<div class="main-buttons">
+<button class="btn clear" onclick="clearCalculator()">AC</button>
+<button class="btn" onclick="backspace()">⌫</button>
+<button class="btn percent" onclick="percent()">%</button>
+<button class="btn operator" onclick="inputOperator('/')">÷</button>
+<button class="btn" onclick="inputNumber('7')">7</button>
+<button class="btn" onclick="inputNumber('8')">8</button>
+<button class="btn" onclick="inputNumber('9')">9</button>
+<button class="btn operator" onclick="inputOperator('*')">×</button>
+<button class="btn" onclick="inputNumber('4')">4</button>
+<button class="btn" onclick="inputNumber('5')">5</button>
+<button class="btn" onclick="inputNumber('6')">6</button>
+<button class="btn operator" onclick="inputOperator('-')">-</button>
+<button class="btn" onclick="inputNumber('1')">1</button>
+<button class="btn" onclick="inputNumber('2')">2</button>
+<button class="btn" onclick="inputNumber('3')">3</button>
+<button class="btn operator" onclick="inputOperator('+')">+</button>
+<button class="btn zero" onclick="inputNumber('0')">0</button>
+<button class="btn" onclick="inputNumber('.')">.</button>
+<button class="btn equals" onclick="openPremium()">=</button>
+</div>
+</div>
+
+<div id="historyPage" class="history-panel">
+<div class="history-title">Calculation History</div>
+<div id="historyList">No calculations yet.</div>
+</div>
+
+<div id="premiumPage" class="premium-info">
+<h2>Premium</h2>
+<p>Unlock calculator results with Premium Access. Premium access costs ₹49.</p>
+<br><p>Click the <b>=</b> button to access the Premium payment screen.</p>
+</div>
+</div>
+
+<div class="modal-overlay" id="premiumModal">
+<div class="premium-modal">
+<div class="modal-header">
+<div class="lock-box">🔒</div>
+<div class="modal-title"><h2>Premium Access Required</h2><p>Unlock your calculation result instantly</p></div>
+<button class="close-btn" onclick="closePremium()">×</button>
+</div>
+
+<div class="payment-content">
+<div class="payment-required">
+<div><div class="required-label">Required Payment</div><div class="required-text">Pay ₹49 to unlock the calculator result.</div></div>
+<div class="price-box"><div class="price">₹49</div><div class="pass-text">One-time / 24h pass</div></div>
+</div>
+
+<div class="payment-grid">
+<div class="upi-card">
+<div class="card-label">Pay to UPI ID</div>
+<div class="upi-row">
+<span class="upi-id" id="upiText">6361914076@upi</span>
+<button class="copy-btn" onclick="copyUPI()">▢</button>
+</div>
+<button class="pay-btn" onclick="payUsingUPI()">↗ &nbsp; Pay ₹49 (Open UPI App)</button>
+</div>
+<div class="qr-card"><div id="qrcode"></div></div>
+</div>
+
+<div class="payment-message" id="paymentMessage">
+Payment submitted for verification. Your Premium access will be unlocked only after successful payment verification.
+</div>
+</div>
+
+<div class="modal-footer">
+<button class="cancel-btn" onclick="closePremium()">Cancel</button>
+<button class="paid-btn" onclick="confirmPayment()">🛡 &nbsp; I Have Paid</button>
+</div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

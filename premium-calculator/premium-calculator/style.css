@@ -1,0 +1,59 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+body{min-height:100vh;background:#070b14;color:#fff;display:flex;justify-content:center;padding:25px 10px}
+.app{width:100%;max-width:680px}
+.navbar{height:68px;background:#0d1425;border:1px solid #26334d;border-radius:24px;display:flex;align-items:center;padding:7px;margin:0 auto 36px}
+.nav-item{flex:1;height:54px;border-radius:20px;display:flex;justify-content:center;align-items:center;gap:12px;color:#aab6cc;font-size:18px;cursor:pointer}
+.nav-item.active{background:linear-gradient(135deg,#2869ec,#3564ed);color:white;box-shadow:0 8px 20px rgba(38,100,235,.35)}
+.nav-icon{font-size:25px}
+.calculator{background:#0d1425;border:1px solid #26334d;border-radius:35px;padding:36px}
+.display{height:200px;background:#030817;border:1px solid #202d47;border-radius:25px;padding:28px 24px;margin-bottom:36px;position:relative}
+.expression{color:#8997ad;font-size:16px;text-align:right;min-height:25px}
+.result{height:75px;display:flex;justify-content:flex-end;align-items:center;font-size:48px;font-weight:700;overflow:hidden}
+.display-line{position:absolute;bottom:59px;left:24px;right:24px;height:1px;background:#182239}
+.memory{position:absolute;right:24px;bottom:26px;color:#9aa8bf;font-size:15px}
+.scientific{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:18px}
+.main-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+button{border:none;color:white;cursor:pointer;font-weight:700;font-size:19px;transition:.15s}
+button:active{transform:scale(.95)}
+.sci-btn{height:55px;border-radius:19px;background:#182338;color:#c5cfdf}
+.btn{height:85px;border-radius:23px;background:#192438}
+.operator{background:#142c5d;color:#63a5ff;border:1px solid #2860b7}
+.clear{background:#29192b;color:#ff718f;border:1px solid #76304e}
+.percent{color:#54a3ff}.zero{grid-column:span 2}
+.equals{background:linear-gradient(135deg,#2868eb,#4849df);box-shadow:0 12px 25px rgba(43,85,239,.35)}
+.history-panel,.premium-info{display:none;background:#0d1425;border:1px solid #26334d;border-radius:30px;padding:30px}
+.history-title{font-size:24px;font-weight:700;margin-bottom:20px}
+.history-item{padding:18px;border-radius:15px;background:#121c30;margin-bottom:10px;color:#b8c4d7}
+.premium-info h2{font-size:28px;margin-bottom:15px}.premium-info p{color:#9ba9bf;line-height:1.7}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;z-index:9999}
+.modal-overlay.show{display:flex}
+.premium-modal{width:100%;max-width:770px;background:#0d1425;border:1px solid #293752;border-radius:30px;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.65)}
+.modal-header{min-height:138px;background:linear-gradient(135deg,#1b2d63,#111b32 65%);border-bottom:1px solid #293752;display:flex;align-items:center;padding:28px 36px;gap:18px}
+.lock-box{width:62px;height:62px;border-radius:22px;background:rgba(255,179,0,.12);border:1px solid #a66c18;display:flex;align-items:center;justify-content:center;font-size:32px}
+.modal-title h2{font-size:27px;margin-bottom:5px}.modal-title p{color:#9daac0;font-size:17px}
+.close-btn{margin-left:auto;width:48px;height:48px;border-radius:50%;background:#1b2a42;color:#9aa9bf;font-size:27px;display:flex;align-items:center;justify-content:center}
+.payment-content{padding:36px}
+.payment-required{background:#030817;border:1px solid #202d47;border-radius:24px;padding:24px;display:flex;align-items:center;margin-bottom:36px}
+.required-label{color:#99a7bc;font-size:16px;margin-bottom:8px}.required-text{color:#d4dce8;font-size:19px;font-weight:700}
+.price-box{margin-left:auto;text-align:right}.price{color:#ffbd20;font-size:36px;font-weight:800}.pass-text{color:#6e7d95;font-size:15px;margin-top:5px}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.upi-card,.qr-card{background:#030817;border:1px solid #202d47;border-radius:24px;padding:24px;min-height:225px}
+.card-label{color:#9ba9bd;margin-bottom:10px;font-size:15px}
+.upi-row{height:62px;background:#121c30;border:1px solid #263650;border-radius:17px;display:flex;align-items:center;padding:0 18px;margin-bottom:22px}
+.upi-id{color:#61a4ff;font-weight:700;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copy-btn{margin-left:auto;background:transparent;color:#9ba9bf;font-size:23px}
+.pay-btn{width:100%;height:60px;border-radius:18px;background:linear-gradient(135deg,#2869ed,#4b4ae3);box-shadow:0 10px 25px rgba(38,98,235,.35)}
+.qr-card{display:flex;justify-content:center;align-items:center}
+#qrcode{width:170px;height:170px;background:white;border-radius:18px;padding:10px;display:flex;justify-content:center;align-items:center}
+#qrcode img{width:150px!important;height:150px!important}
+.modal-footer{border-top:1px solid #293752;padding:24px 36px;display:flex;justify-content:space-between;align-items:center}
+.cancel-btn{height:52px;padding:0 24px;border-radius:17px;background:#1c2a40;color:#c4cede}
+.paid-btn{height:54px;padding:0 28px;border-radius:17px;background:#08a58f;color:white;box-shadow:0 10px 25px rgba(0,166,140,.25)}
+.payment-message{display:none;margin-top:20px;background:#211d0e;border:1px solid #66531d;color:#e5c65e;padding:15px;border-radius:14px;line-height:1.5}
+@media(max-width:650px){
+body{padding:10px}.navbar{margin-bottom:20px}.nav-item{font-size:14px;gap:5px}.nav-icon{font-size:19px}
+.calculator{padding:20px;border-radius:25px}.display{height:175px}.scientific{gap:7px}.sci-btn{height:48px;font-size:14px;border-radius:14px}
+.main-buttons{gap:9px}.btn{height:70px;border-radius:18px;font-size:17px}.modal-header{padding:22px}.modal-title h2{font-size:20px}.modal-title p{font-size:14px}
+.payment-content{padding:20px}.payment-required{padding:18px}.required-text{font-size:15px}.price{font-size:28px}.payment-grid{grid-template-columns:1fr}
+.modal-footer{padding:18px 20px}.paid-btn{padding:0 18px;font-size:14px}
+}

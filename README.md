@@ -1,4 +1,4 @@
-## Hi👋,I'm Sujan Billava
+## Hi👋,I'm Sujan 
 
 # 💫 About Me:
 🎓 Computer Science and Engineering student | 
